@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genarasousa.github.io/sitemap.xml
+Sitemap: https://genarasousa.github.io/datilografia-cheapino/sitemap.xml
