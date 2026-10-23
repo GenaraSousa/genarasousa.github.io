@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- Tema (escuro por padrão) e fundo antes das fontes e do app chegarem: sem tela branca ao recarregar. -->
+    <style>
+      html { background: #131318; color: #eeebe4; }
+      html[data-theme='light'] { background: #f5f2ea; color: #1c1a17; }
+      html.js #root > main { visibility: hidden; }
+    </style>
+    <script>
+      (function () {
+        var t;
+        try { t = JSON.parse(localStorage.getItem('datilografia-cheapino:tema')); } catch (e) {}
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+        document.documentElement.classList.add('js');
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -59,8 +74,8 @@
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-C61Kg14C.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-bZ4Jq-X5.css">
+    <script type="module" crossorigin src="./assets/index-KGWTokSS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D3R9lNdH.css">
   </head>
   <body>
     <div id="root">
